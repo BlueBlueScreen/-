@@ -35,6 +35,19 @@
 
 5.       为博客系统添加注册和登录功能。首先在Mongoose数据库中注册一个User模型并将相应代码置于models文件夹下。然后分别设计一个登录和注册页面，并添加对应的JavaScript代码，使得当用户点击注册按钮后跳转到注册页面，并将注册的用户名和密码储存在数据库中；当用户点击登录按钮后系统将用户信息与数据库中的信息对比，并根据对比结果执行相应的操作。最后为登录和注册页面添加Css样式。
 
+##### 数据库结构
+```mermaid
+graph LR
+  blog[blog]-->ar[articles]-..->id
+  ar-..->title
+  ar-..->description
+  ar-..->markdown
+  ar-..->author
+  ar-..->createdAt
+  blog-->user[users]-..->username
+  user-..->password
+  ```
+
 ## 实验结果
 
 通过以上步骤，我们制作出了一个简单而美观，基础功能齐全博客系统。
