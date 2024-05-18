@@ -1,0 +1,183 @@
+    *{
+            padding:5px;
+            margin:10px;
+        }
+        body {
+            background-color: #97b3ca;
+        }
+
+        h1 {
+            color: #005ae6; 
+            border-radius: 20px; 
+            background-color: #b8ebfe; 
+            font-size: 1.5rem;
+            display: flex; /* 使用flex布局 */
+            justify-content: center; 
+            height: 5vh; 
+            margin: 20px;
+            padding:0px 5px;
+            max-width:150px;
+        }
+        h3{
+            color: #005ae6; 
+            font-size: 3rem;
+            display: flex; /* 使用flex布局 */
+            justify-content: center; 
+            height: 10vh; 
+            margin: 20px;
+            padding:0px 5px;
+            width:fit-content;
+        }
+        a {
+            color:#3a8bff ;
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 16px;
+            padding: 5px 50px; 
+            margin: 5px 20px; 
+            background-color: #24547d; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); 
+            display: inline-block; 
+            }
+
+        a:hover {
+            color: #00adef;
+            text-decoration: underline; 
+            background-color: #25ddf5; 
+            border-color: #990000; 
+                }
+            
+        h2 {
+            color: #005ae6; 
+            border-radius: 20px; 
+            background-color: #b8ebfe; 
+            font-size: 1.5rem;
+            display: flex; /* 使用flex布局 */
+            justify-content: center; 
+            height: 5vh; 
+            margin: 20px;
+            padding:0px 5px;
+            max-width:150px
+        }
+        p{
+            background-color:#24547d;
+            font-size:30px;
+            display:flex;
+            justify-content:center;
+            color:white;
+            border-radius: 20px; 
+
+            width:fit-content;
+            margin:30px;
+            height:fit-content;
+            min-width:200px;
+        }
+        .exhibit{
+            border: 2px solid #24547d;
+            color:white;
+            background-color:#54a2f8;
+            font-size: 20px;
+            height: 50px;
+            line-height: 30px;
+            width:50%;
+           height:fit-content;
+            outline: none !important;
+        }
+        button{
+            color: #00adef; /* 设置链接颜色为蓝色 */
+            text-decoration: none; /* 移除下划线 */
+            font-weight: bold; /* 设置字体粗细为 bold */
+            font-size: 16px; /* 设置字体大小为 16px */
+            padding: 5px 50px; /* 设置内边距为 5px top/bottom 和 10px left/right */
+            margin: 5px; /* 设置外边距为 50px */
+            background-color: #24547d; /* 设置背景颜色为浅灰色 */
+            border: 1px solid #ccc; /* 设置边框为 1px 宽的灰色实线 */
+            border-radius: 5px; /* 设置圆角为 5px */
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+            display: inline-block; /* 使链接成为内联块元素 */
+        }
+        button:hover {
+            color: #00adef;
+            text-decoration: underline; 
+            background-color: #25ddf5; 
+            border-color: #990000; 
+        }
+        label{
+            color: white;
+            font-size:30px;
+            display:block;
+        }
+        input.class1{
+            border: 2px solid #24547d;
+            color:white;
+            background-color:#54a2f8;
+            font-size: 20px;
+            height: 50px;
+            line-height: 30px;
+            width: 50%;
+            outline: none !important;
+        }
+        input.class2
+            {
+            background: transparent;
+            border: 0;
+            color: #f2f2f2;
+            font-size: 30px;
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+            outline: none !important;
+        }
+        .time{
+            background: transparent;
+            border: 0;
+            color: #f2f2f2;
+            font-size: 30px;
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+            outline: none !important;
+        }
+        textarea{
+            border: 2px solid #24547d;
+            color:white;
+            background-color:#54a2f8;
+            font-size: 20px;
+            height: 100px;
+            line-height: 30px;
+            width: 50%;
+            outline: none !important;
+        }
+        .box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px; 
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            max-width:200px;
+        }
+        .signature{
+            background-color:#e5d1ac;
+            border-radius:20px;
+            position:fixed;
+            bottom:100px;
+            right:75px;
+            width:fit-content;
+            font-size:30px;
+            color:#8e817a;
+            text-align:center;
+            }
+        .sign{
+            background-color:#e5d1ac;
+            border-radius:20px;
+            float:right;
+            width:fit-content;
+            font-size:30px;
+            color:#8e817a;
+            text-align:center;
+            }
+
+
+

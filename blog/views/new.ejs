@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/css/allcss.css">
+</head>
+<body>
+<h3>New Article</h3>
+<form action="/new" method="POST">
+    <div>
+    <label for="title">Title</label>
+    <input class="class1" required type="text" name="title" id="title">
+    </div>
+
+    <div>
+    <label for="description">Description</label>
+    <textarea name="description" id="description"></textarea>
+    </div>
+
+    <div>
+    <label for="markdown">Markdown</label>
+    <textarea name="markdown" id="markdown"></textarea>
+    </div>
+
+    <div class="signature">
+    落款
+    </div>
+    <div class="box">
+    <input class="class2" required type="text" name="author" id="author">
+    </div>
+    
+    <a href="/all">Cancel</a>
+    <a href="/all">Back</a>
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

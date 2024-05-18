@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/allcss.css">
+</head>
+<body>
+    <h1 class="mb-4">Articles</h1>
+        <a href="/new">New Articles</a>
+        <hr />
+    <% articles.forEach(article=>{%>
+    <h2>Title</h2>
+    <p><%= article.title %></p>
+    <div class="sign"><%= article.author %></div>
+    <a href="/edit/<%=article._id %>">详情</a>
+    <form action="/<%=article._id %>?_method=DELETE" method="POST">
+        <button type="submit">删除</button>
+    </form>
+    <hr />
+    <% })%>
+</body>
+</html>

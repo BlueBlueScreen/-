@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wyr的登录页面</title>
+    
+    <link rel="stylesheet" href="/css/login.css">
+
+</head>
+<body>
+    <div class="shell">
+        <div class="box-left">
+            <h2>Login</h2>
+            <span>enjoy your self in the Blog<br>Wish you good day</span>
+        </div>
+        <div class="box-right">
+            <div class="form">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <input type="button"  id="submit" value="Submit" onclick="submitForm()">
+                <input type="button"  id="register" value="Register" onclick="redirectTo('/html/register.html')">
+
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+    async function submitForm() {
+    const username = document.getElementById('email').value;  
+    const password = document.getElementById('password').value;  
+    try {  
+        const response = await fetch('/login', {  
+            method: 'POST',  
+            headers: {
+                'Content-Type': 'application/json'  
+            },  
+            body: JSON.stringify({ username, password })  
+        });  
+            if (!response.ok) {
+                throw new Error('系统出错，请重试');
+            }
+            const result = await response.json();
+            alert(result.message); 
+            window.location.href="/all"
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+            // 这里应该处理错误，例如显示错误信息给用户
+            alert('登录失败：' + error.message);
+        }
+}
+
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body class="register">
+<form id="registerForm" class="sign-up">
+    <h1 class="sign-up-title">Sign up in seconds</h1>
+    <input id ="username" type="text" class="sign-up-input" placeholder="What's your username?" autofocus>
+    <input id ="password" type="password" class="sign-up-input" placeholder="Choose a password">
+    <input type="submit" value="Sign me up!" class="sign-up-button" >
+  </form>
+<script>
+    document.getElementById('registerForm').onsubmit = async function(event) {
+        event.preventDefault(); // 阻止表单的默认提交行为
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        try {
+            const response = await fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+            console.log("开始发送请求");
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const result = await response.json();
+            alert(result.message); // 弹出注册成功或失败的信息
+            window.location.href="/"
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+            // 这里应该处理错误，例如显示错误信息给用户
+            alert('注册失败：' + error.message);
+        }
+    };
+</script>
+</body>
+</html>
