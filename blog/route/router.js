@@ -22,7 +22,7 @@ router.post('/new', async (req,res) => {
 
 router.delete('/:id', async (req, res) => {
   await article.deleteMany({ _id: req.params.id });
-  res.redirect('/')
+  res.redirect('/all')
 })
 
 router.put('/:id', async (req, res) => {
